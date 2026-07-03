@@ -13,7 +13,7 @@ Anything that matches neither list is called not-CVD-relevant without an LLM
 call.
 
 The lists are intentionally over-inclusive on recall — the LLM stage in
-:mod:`cvd_eda.task3_curation.llm` is responsible for precision.
+:mod:`cvd_eda.curation.llm` is responsible for precision.
 """
 
 from __future__ import annotations
