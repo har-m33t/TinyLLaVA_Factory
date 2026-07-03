@@ -1,6 +1,6 @@
 """LLM-backed relevance classifier for borderline samples.
 
-The keyword net (:mod:`cvd_eda.task3_curation.keywords`) handles the two easy
+The keyword net (:mod:`cvd_eda.curation.keywords`) handles the two easy
 cases: strongly-worded CVD samples get called "yes" without an LLM call, and
 samples with no CVD-adjacent vocabulary at all get called "no" without an LLM
 call. Everything in between — a mention of "cardiac", "aortic", "hypertension"
@@ -88,8 +88,8 @@ class LLMClassifier:
     """Anthropic-backed classifier with an on-disk JSON cache.
 
     Kept thin on purpose — this module only knows how to classify one sample;
-    the orchestrator in :mod:`cvd_eda.task3_curation.curate` decides which
-    samples to send.
+    the orchestrator in :mod:`cvd_eda.curation.curate` decides which samples
+    to send.
     """
 
     def __init__(
@@ -101,6 +101,7 @@ class LLMClassifier:
     ):
         try:
             import anthropic  # noqa: F401
+            import httpx
         except ImportError as exc:  # pragma: no cover - dependency error path
             raise ImportError(
                 "The `anthropic` package is required for LLM classification. "
@@ -120,7 +121,12 @@ class LLMClassifier:
         self.model = model
         self.max_retries = max_retries
         self.max_tokens = max_tokens
-        self._client = Anthropic()
+        # TinyLLaVA pins httpx==0.24.0 for Gradio; anthropic>=0.40 builds its
+        # default httpx.Client with HTTPTransport(socket_options=...) which is
+        # a newer-httpx-only kwarg. Passing a pre-built bare httpx.Client
+        # sidesteps that code path (see anthropic/_base_client.py:916) so
+        # neither pin has to move.
+        self._client = Anthropic(http_client=httpx.Client(timeout=60.0))
 
         self._cache_path = None
         self._cache: dict[str, dict] = {}
