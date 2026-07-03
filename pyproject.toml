@@ -25,14 +25,17 @@ dependencies = [
 
 [project.optional-dependencies]
 train = ["deepspeed==0.14.0", "ninja", "wandb"]
+# EDA workflow (eda/*, see EDA_CLAUDE_TASKS.md). Kept separate so the CVD
+# analysis boxes don't have to install the Torch/Transformers pins.
+eda = ["anthropic>=0.40.0"]
 
 [project.urls]
 "Homepage" = "https://github.com/DLCV-BUAA/TinyLLaVABench"
 "Bug Tracker" = "https://github.com/DLCV-BUAA/TinyLLaVABench/issues"
 
 [tool.setuptools.packages.find]
-exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*", "cvd_eda*"]
 
 [tool.wheel]
-exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*"]
+exclude = ["assets*", "benchmark*", "docs", "dist*", "playground*", "scripts*", "tests*", "cvd_eda*"]
 
