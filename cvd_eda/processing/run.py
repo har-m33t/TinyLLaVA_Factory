@@ -4,7 +4,7 @@ Usage
 -----
 ARCHS4::
 
-    python -m cvd_eda.task4_processing.run \
+    python -m cvd_eda.processing.run \
         --dataset archs4 \
         --archs4-h5 /path/to/archs4_raw.h5 \
         --relevance-csv /path/to/cvd_relevance_archs4.csv \
@@ -13,7 +13,7 @@ ARCHS4::
 
 RECOUNT3 (one CLI invocation processes every project in the directory)::
 
-    python -m cvd_eda.task4_processing.run \
+    python -m cvd_eda.processing.run \
         --dataset recount3 \
         --recount3-counts-dir /path/to/recount3_raw/ \
         --relevance-csv /path/to/cvd_relevance_recount3.csv \
@@ -157,7 +157,7 @@ def _process_one_dataset(
 
 def _build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
-        prog="python -m cvd_eda.task4_processing.run",
+        prog="python -m cvd_eda.processing.run",
         description="Task 4: Data Processing & Cleaning Agent for the CVD EDA workflow.",
     )
     p.add_argument("--dataset", choices=["archs4", "recount3"], required=True)
