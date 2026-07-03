@@ -1,12 +1,12 @@
 """Offline smoke test — no real ARCHS4/RECOUNT3 files required.
 
 Fabricates a tiny dataset in memory and walks it through every stage of
-:mod:`cvd_eda.task4_processing`, then also drives the CLI (:mod:`run`) via
+:mod:`cvd_eda.processing`, then also drives the CLI (:mod:`run`) via
 synthetic Parquet inputs written to a temp directory.
 
 Run::
 
-    python -m cvd_eda.task4_processing.smoke_test
+    python -m cvd_eda.processing.smoke_test
 """
 
 from __future__ import annotations
