@@ -25,8 +25,9 @@ dependencies = [
 
 [project.optional-dependencies]
 train = ["deepspeed==0.14.0", "ninja", "wandb"]
-# EDA workflow (eda/*, see EDA_CLAUDE_TASKS.md). Kept separate so the CVD
-# analysis boxes don't have to install the Torch/Transformers pins.
+# CVD EDA workflow (cvd_eda/*, see .claude/EDA_CLAUDE_TASKS.md). Kept
+# separate so the CVD analysis boxes don't have to install the
+# Torch/Transformers pins. Currently: Task 3 (curation) + Task 5 (labeling).
 eda = ["anthropic>=0.40.0"]
 
 [project.urls]
