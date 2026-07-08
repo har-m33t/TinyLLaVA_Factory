@@ -1,0 +1,57 @@
+{
+  "n_cvd_pool_samples": 38072,
+  "n_samples_with_any_hit": 366,
+  "pct_of_pool_with_any_hit": 0.961,
+  "per_field_hits": {
+    "characteristics_ch1": {
+      "deceased": 0,
+      "death": 316,
+      "survival": 0,
+      "vital status": 0,
+      "follow-up": 0,
+      "outcome": 79,
+      "mortality": 0
+    },
+    "title": {
+      "deceased": 0,
+      "death": 0,
+      "survival": 0,
+      "vital status": 0,
+      "follow-up": 0,
+      "outcome": 3,
+      "mortality": 0
+    },
+    "source_name_ch1": {
+      "deceased": 0,
+      "death": 0,
+      "survival": 0,
+      "vital status": 0,
+      "follow-up": 0,
+      "outcome": 0,
+      "mortality": 0
+    }
+  },
+  "per_term_hits_across_fields": {
+    "deceased": 0,
+    "death": 316,
+    "survival": 0,
+    "vital status": 0,
+    "follow-up": 0,
+    "outcome": 79,
+    "mortality": 0
+  },
+  "fields_searched": [
+    "characteristics_ch1",
+    "title",
+    "source_name_ch1"
+  ],
+  "keyword_list": [
+    "deceased",
+    "death",
+    "survival",
+    "vital status",
+    "follow-up",
+    "outcome",
+    "mortality"
+  ]
+}
