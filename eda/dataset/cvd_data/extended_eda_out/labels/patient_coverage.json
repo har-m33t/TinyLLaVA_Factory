@@ -1,0 +1,9 @@
+{
+  "n_samples": 1098771,
+  "n_with_resolvable_patient_key": 192162,
+  "coverage_pct": 17.4888,
+  "n_unique_patients_resolved": 31655,
+  "n_unique_patients_fallback": 906609,
+  "n_unique_patients_total": 938264,
+  "fallback_method": "sample_as_own_patient \u2014 each sample without a resolvable (subject|patient|individual|donor)[_ ]id key in characteristics_ch1 is counted as its own patient. This upper-bounds the patient count and preserves per-disease sample totals."
+}

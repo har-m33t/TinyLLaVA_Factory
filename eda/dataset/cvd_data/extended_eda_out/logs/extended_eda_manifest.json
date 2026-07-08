@@ -1,0 +1,16 @@
+{
+  "h5_path": "eda/dataset/cvd_data/archs4/human_gene_v2.latest.h5",
+  "qc_csv": "eda/dataset/cvd_data/eda_out/qc/qc_full_dataset.csv",
+  "outdir": "eda/dataset/cvd_data/extended_eda_out",
+  "run_started": "2026-07-08T00:52:25.635911+00:00",
+  "steps": [
+    {
+      "step": "writeup",
+      "status": "ok",
+      "started": "2026-07-08T00:52:25.635915+00:00",
+      "finished": "2026-07-08T00:52:25.639497+00:00",
+      "output": "eda/dataset/cvd_data/extended_eda_out/eda_writeup.md"
+    }
+  ],
+  "run_finished": "2026-07-08T00:52:25.639520+00:00"
+}

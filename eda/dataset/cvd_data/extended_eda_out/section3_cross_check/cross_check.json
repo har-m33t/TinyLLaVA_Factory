@@ -1,0 +1,20 @@
+{
+  "label_table": {
+    "n_cvd_by_disease_keyword": 10557,
+    "n_cvd_pool_disease_or_tissue": 38072,
+    "n_cvd_by_tissue_only": 27515
+  },
+  "section1": {
+    "cardiovascular_row_n_samples": 10557
+  },
+  "section2": {
+    "total_cvd_row_n_samples": 38072
+  },
+  "checks": {
+    "section1_cvd_equals_disease_keyword_count": true,
+    "section2_total_equals_pool_count": true,
+    "section2_total_ge_section1_cvd": true,
+    "tissue_only_delta_matches": true
+  },
+  "discrepancy": null
+}

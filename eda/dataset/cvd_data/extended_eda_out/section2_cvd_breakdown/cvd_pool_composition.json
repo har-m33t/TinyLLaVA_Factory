@@ -1,0 +1,71 @@
+{
+  "n_pool_samples": 38072,
+  "n_by_disease_only": 4207,
+  "n_by_tissue_only": 27515,
+  "n_by_both": 6350,
+  "n_by_disease_total": 10557,
+  "n_by_tissue_total": 33865,
+  "cvd_pool_resolution": {
+    "n_samples": 38072,
+    "n_samples_with_resolved_patient_key": 2152,
+    "resolution_pct": 5.6524,
+    "n_patients_truly_resolved": 718,
+    "n_patients_after_fallback": 36638
+  },
+  "per_subtype_resolution": {
+    "heart_failure": {
+      "n_samples": 971,
+      "n_samples_with_resolved_patient_key": 10,
+      "n_patients_truly_resolved": 10,
+      "n_patients_after_fallback": 971,
+      "resolution_pct": 1.0299
+    },
+    "arrhythmia_afib": {
+      "n_samples": 127,
+      "n_samples_with_resolved_patient_key": 1,
+      "n_patients_truly_resolved": 1,
+      "n_patients_after_fallback": 127,
+      "resolution_pct": 0.7874
+    },
+    "coronary_artery_disease": {
+      "n_samples": 980,
+      "n_samples_with_resolved_patient_key": 133,
+      "n_patients_truly_resolved": 38,
+      "n_patients_after_fallback": 885,
+      "resolution_pct": 13.5714
+    },
+    "cardiomyopathy_other": {
+      "n_samples": 148,
+      "n_samples_with_resolved_patient_key": 16,
+      "n_patients_truly_resolved": 5,
+      "n_patients_after_fallback": 137,
+      "resolution_pct": 10.8108
+    },
+    "hypertension": {
+      "n_samples": 716,
+      "n_samples_with_resolved_patient_key": 166,
+      "n_patients_truly_resolved": 70,
+      "n_patients_after_fallback": 620,
+      "resolution_pct": 23.1844
+    },
+    "disease_matched_subtype_unresolved": {
+      "n_samples": 7615,
+      "n_samples_with_resolved_patient_key": 399,
+      "n_patients_truly_resolved": 124,
+      "n_patients_after_fallback": 7340,
+      "resolution_pct": 5.2397
+    },
+    "tissue_only_disease_unconfirmed": {
+      "n_samples": 27515,
+      "n_samples_with_resolved_patient_key": 1427,
+      "n_patients_truly_resolved": 477,
+      "n_patients_after_fallback": 26565,
+      "resolution_pct": 5.1863
+    }
+  },
+  "comorbidity_with_non_cvd_categories": {
+    "n_cvd_disease_pool_samples_matching_another_category": 799,
+    "denominator_is_cvd_disease": 10557,
+    "note": "Count of samples where is_cvd_disease is True AND at least one non-CVD category regex also matched. The first-match priority rule assigned these to `cardiovascular` in Section 1, suppressing the non-CVD category's count for these samples."
+  }
+}
