@@ -74,3 +74,17 @@ human_gene_v2.latest.h5*.tmp
 # Intermediate normalized subsample cache (1.3 GB float32 matrix).
 # Regenerable from the reference distribution + subsample indices.
 eda/dataset/cvd_data/eda_out/normalized/subsample_matrix.npy
+
+# BulkFormer third-party repo (~25 MB, includes its own .git). Users clone it
+# themselves via `git clone https://github.com/KangBoming/BulkFormer.git bulkencoders/BulkFormer`.
+bulkencoders/BulkFormer/
+
+# Downloaded BulkFormer checkpoints + support tensors (~1.6 GB). Regenerable
+# via `python -m bulkencoders.download`. The existing `checkpoints/*` rule
+# above uses a single-level glob that misses nested files here.
+bulkencoders/checkpoints/
+
+# Linear-probe intermediates. Both are large and deterministic —
+# regenerable from `linear_probe/labels.py` and `linear_probe/extract.py`.
+linear_probe/embeddings/
+linear_probe/*.parquet
