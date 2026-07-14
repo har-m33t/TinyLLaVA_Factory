@@ -11,6 +11,7 @@ from ..utils.arguments import DataArguments
 from ..utils.constants import *
 
 
+import numpy as np
 import transformers
 import torch
 from torch.utils.data import Dataset
@@ -60,8 +61,17 @@ class LazySupervisedDataset(Dataset):
         if 'image' in sources:
             image_file = self.list_data_dict[i]['image']
             image_folder = self.data_args.image_folder
-            image = Image.open(os.path.join(image_folder, image_file)).convert('RGB')
-            image = self.image_preprocess(image)
+            image_path = os.path.join(image_folder, image_file)
+            if image_file.endswith('.npy'):
+                # Transcriptomic modality: a precomputed 1-D expression vector
+                # (e.g. BulkFormer's 20,010-gene log1p-TPM input) loaded directly
+                # instead of decoding + preprocessing an RGB image. The vision
+                # tower consumes this vector as-is; the collator stacks equal-length
+                # vectors into a [B, n_genes] batch.
+                image = torch.from_numpy(np.load(image_path)).float()
+            else:
+                image = Image.open(image_path).convert('RGB')
+                image = self.image_preprocess(image)
             data_dict['image'] = image
         elif self.data_args.is_multimodal:
             # image does not exist in the data, but the model is multimodal
