@@ -1,0 +1,18 @@
+{
+  "started": "2026-07-08T00:23:31.323263+00:00",
+  "finished": "2026-07-08T00:23:32.150037+00:00",
+  "n_positive": 8725,
+  "n_negative": 26175,
+  "negative_ratio_requested": 3,
+  "negative_ratio_actual": 3.0,
+  "seed": 20260707,
+  "singlecell_filter": {
+    "total": 1098771,
+    "kept": 779009,
+    "excluded": 319762,
+    "excluded_pct": 29.1018,
+    "threshold": 0.5
+  },
+  "n_unique_series_positives": 480,
+  "n_unique_series_negatives": 12174
+}

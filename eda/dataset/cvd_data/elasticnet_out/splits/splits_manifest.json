@@ -1,0 +1,46 @@
+{
+  "started": "2026-07-08T01:07:46.835228+00:00",
+  "finished": "2026-07-08T01:07:48.156052+00:00",
+  "n_outer_folds": 5,
+  "seed": 20260707,
+  "n_samples": 34900,
+  "n_unique_series": 12597,
+  "per_fold": [
+    {
+      "fold_id": 0,
+      "n_samples": 6877,
+      "n_positive": 1797,
+      "n_negative": 5080,
+      "n_unique_series": 2497
+    },
+    {
+      "fold_id": 1,
+      "n_samples": 6764,
+      "n_positive": 1360,
+      "n_negative": 5404,
+      "n_unique_series": 2521
+    },
+    {
+      "fold_id": 2,
+      "n_samples": 6662,
+      "n_positive": 1520,
+      "n_negative": 5142,
+      "n_unique_series": 2529
+    },
+    {
+      "fold_id": 3,
+      "n_samples": 7677,
+      "n_positive": 2451,
+      "n_negative": 5226,
+      "n_unique_series": 2529
+    },
+    {
+      "fold_id": 4,
+      "n_samples": 6920,
+      "n_positive": 1597,
+      "n_negative": 5323,
+      "n_unique_series": 2521
+    }
+  ],
+  "series_leakage_check": "passed"
+}

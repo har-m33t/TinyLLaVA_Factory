@@ -1,0 +1,18 @@
+{
+  "fold_id": 3,
+  "started": "2026-07-14T05:24:58.574523+00:00",
+  "finished": "2026-07-14T05:25:55.303589+00:00",
+  "n_train": 27223,
+  "n_test": 7677,
+  "n_train_positive": 6274,
+  "n_test_positive": 2451,
+  "chosen_C": 1.0,
+  "chosen_l1_ratio": 0.1,
+  "n_nonzero_coefs": 1500,
+  "inner_n_folds_used": 3,
+  "n_features_total": 49231,
+  "n_features_used": 1500,
+  "max_iter": 200,
+  "tol": 0.01,
+  "saga_converged": true
+}

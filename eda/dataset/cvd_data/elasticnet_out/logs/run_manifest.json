@@ -1,0 +1,44 @@
+{
+  "started": "2026-07-14T05:22:05.367170+00:00",
+  "h5_path": "eda/dataset/cvd_data/archs4/human_gene_v2.latest.h5",
+  "outdir": "eda/dataset/cvd_data/elasticnet_out",
+  "config": {
+    "negative_ratio": 10,
+    "n_outer_folds": 5,
+    "n_inner_folds": 3,
+    "seed": 20260707,
+    "n_jobs": 1,
+    "max_iter": 200,
+    "tol": 0.01,
+    "top_k_genes": 1500
+  },
+  "stages_requested": [
+    "fit",
+    "evaluate",
+    "gene_signal",
+    "plots"
+  ],
+  "stage_status": {
+    "label": "skipped",
+    "subsample": "skipped",
+    "load_expression": "skipped",
+    "splits": "skipped",
+    "fit": {
+      "status": "ok",
+      "wall_seconds": 286.97
+    },
+    "evaluate": {
+      "status": "ok",
+      "wall_seconds": 0.03
+    },
+    "gene_signal": {
+      "status": "ok",
+      "wall_seconds": 0.21
+    },
+    "plots": {
+      "status": "ok",
+      "wall_seconds": 0.7
+    }
+  },
+  "finished": "2026-07-14T05:26:53.266373+00:00"
+}

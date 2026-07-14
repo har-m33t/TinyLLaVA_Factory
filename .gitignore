@@ -75,6 +75,10 @@ human_gene_v2.latest.h5*.tmp
 # Regenerable from the reference distribution + subsample indices.
 eda/dataset/cvd_data/eda_out/normalized/subsample_matrix.npy
 
+# Elastic-net training-pool expression matrix (6.4 GB float32).
+# Regenerable via the load_expression stage of `python -m elasticnet.train`.
+eda/dataset/cvd_data/elasticnet_out/expression/X.npy
+
 # BulkFormer third-party repo (~25 MB, includes its own .git). Users clone it
 # themselves via `git clone https://github.com/KangBoming/BulkFormer.git bulkencoders/BulkFormer`.
 bulkencoders/BulkFormer/

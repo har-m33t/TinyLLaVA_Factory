@@ -1,0 +1,16 @@
+{
+  "started": "2026-07-08T00:23:32.154531+00:00",
+  "finished": "2026-07-08T01:07:46.658254+00:00",
+  "n_samples": 34900,
+  "n_genes_before_filter": 67186,
+  "n_genes_after_filter": 49231,
+  "min_detection_frac": 0.1,
+  "count_threshold": 0,
+  "log2_pseudocount": 1.0,
+  "shape_X": [
+    34900,
+    49231
+  ],
+  "chunk_size": 2048,
+  "note": "Low-count filter computed on the training pool, not the whole corpus \u2014 see docstring. Loaded via streaming two-pass to keep peak memory bounded by the final matrix size."
+}

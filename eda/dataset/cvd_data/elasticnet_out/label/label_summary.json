@@ -1,0 +1,36 @@
+{
+  "started": "2026-07-07T23:06:51.503318+00:00",
+  "finished": "2026-07-07T23:07:26.709042+00:00",
+  "total_samples": 1098771,
+  "n_positive": 10557,
+  "positive_pct": 0.9608,
+  "keyword_list": [
+    "cardiovasc",
+    "cardiac",
+    "heart failure",
+    "myocardial infarct",
+    "coronary artery",
+    "atherosclerosis",
+    "cardiomyopathy",
+    "arrhythmia",
+    "atrial fibrillation",
+    "hypertension",
+    "ischemic heart",
+    "aortic",
+    "vascular disease",
+    "congestive heart",
+    "cardiac hypertrophy",
+    "cardiac fibrosis"
+  ],
+  "fields_searched": [
+    "title",
+    "source_name_ch1",
+    "characteristics_ch1"
+  ],
+  "per_field_positive_counts": {
+    "title": 1011,
+    "source_name_ch1": 4598,
+    "characteristics_ch1": 8641
+  },
+  "note": "Weak whole-corpus label \u2014 keyword match on metadata only, no manual curation, no negation rules. Label noise is expected; see writeup."
+}

@@ -1,0 +1,71 @@
+{
+  "n_genes": 49231,
+  "n_folds": 5,
+  "clingen_starter_size": 44,
+  "clingen_present_in_kept_genes": 48,
+  "clingen_recovered_in_top_n": {
+    "top_100": 5
+  },
+  "top_10_by_abs_mean_coef": [
+    {
+      "gene_symbol": "FCGR2A",
+      "mean_coef": 0.7107523083686829,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "GFRA1",
+      "mean_coef": -0.4452756941318512,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "BGN",
+      "mean_coef": 0.4133636951446533,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "TTN",
+      "mean_coef": 0.405048131942749,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": true
+    },
+    {
+      "gene_symbol": "ROBO1",
+      "mean_coef": -0.38313066959381104,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "GATA4",
+      "mean_coef": 0.3734644055366516,
+      "nonzero_frac": 0.800000011920929,
+      "in_clingen_hcvd": true
+    },
+    {
+      "gene_symbol": "CHCHD2",
+      "mean_coef": -0.3686230778694153,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "RPL23AP42",
+      "mean_coef": 0.36580556631088257,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "NEAT1",
+      "mean_coef": -0.3530753254890442,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    },
+    {
+      "gene_symbol": "HSPG2",
+      "mean_coef": -0.34962552785873413,
+      "nonzero_frac": 1.0,
+      "in_clingen_hcvd": false
+    }
+  ]
+}
