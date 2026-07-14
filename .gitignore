@@ -88,3 +88,8 @@ bulkencoders/checkpoints/
 # regenerable from `linear_probe/labels.py` and `linear_probe/extract.py`.
 linear_probe/embeddings/
 linear_probe/*.parquet
+
+# Smoke-test scratch dirs (regenerable by re-running the tests; large — the
+# vicuna one holds a downloaded tokenizer + a reduced-depth Llama checkpoint).
+integration/_smoke_tmp/
+integration/_vicuna_smoke_tmp/
