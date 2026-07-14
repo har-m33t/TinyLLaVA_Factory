@@ -23,16 +23,29 @@ FINETUNE_DATA_PATH=integration/data/finetune.json  # stage-2 instruction annotat
 IMAGE_PATH=integration/data/images                 # dir of per-sample .npy expression vectors
 FINETUNE_IMAGE_PATH=integration/data/images
 
-# LLM backbone: left as the existing placeholder. The Vicuna-7B question is
-# deferred / out of scope for this integration.
-LLM_VERSION=microsoft/phi-2
+# LLM backbone: Vicuna-7B (lmsys/vicuna-7b-v1.5), the confirmed standard backbone.
+# Wiring verified end-to-end in integration/vicuna_smoke_test_result.md (real
+# vicuna loader + real tokenizer + real hidden dim 4096, loss + gradients OK).
+# Two enablers were added to make this a supported path in this repo:
+#   * LLM loader: tinyllava/model/llm/vicuna.py registers `vicuna` ->
+#     LlamaForCausalLM, so LLMFactory selects it via the "vicuna" substring in
+#     the path below.
+#   * Conv template: CONV_VERSION=llama is THIS repo's Vicuna v1 format
+#     (tinyllava/data/template/llama_template.py) — note it is NOT named
+#     `vicuna_v1` here.
+# COMPUTE (do not silently change batch sizes here): Stage-2 full fine-tune of 7B
+# under ZeRO-3 (scripts/zero3.json, 4 GPUs, no offload) needs ~40 GB-class GPUs
+# x4; it will NOT fit 24 GB without gradient checkpointing / ZeRO-3 offload.
+# Confirm the target env's per-GPU VRAM before queuing — see the compute-budget
+# section of integration/vicuna_smoke_test_result.md.
+LLM_VERSION=lmsys/vicuna-7b-v1.5
 # Vision tower: the "bulkformer" prefix selects BulkFormerVisionTower via the
 # substring-matching factory; the path is the local HF config dir exposing
 # hidden_size=643 and bulkformer_variant (BulkFormer-127M).
 VT_VERSION=bulkformer:$(pwd)/integration/bulkformer_hf_config
 VT_VERSION2=""
 CN_VERSION=transcript_linear
-CONV_VERSION=phi
+CONV_VERSION=llama   # Vicuna v1 template (this repo's name for it); used in stage 2
 VERSION=bulkformer-127m
 TRAIN_RECIPE=common
 MODEL_MAX_LENGTH=2048
